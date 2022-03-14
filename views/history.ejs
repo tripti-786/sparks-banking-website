@@ -1,0 +1,29 @@
+<!-- <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css"> -->
+<%- include("partials/header") %>
+
+
+  <h1 class="view-header">TRANSACTION  HISTORY</h1>
+
+
+<div class="table">
+  <table class="content-table">
+    <thead>
+      <tr>
+        <th>Transferred From</th>
+        <th>Transferred To</th>
+        <th>Transferred Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let transaction of transactions){ %>
+      <tr>
+        <td>From  <%= transaction.fromName %></td>
+        <td>To  <%= transaction.toName %></td>
+        <td><%= transaction.transfer %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+
+<%- include("partials/footer") %>
