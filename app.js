@@ -93,6 +93,7 @@ app.put("/view/:id1/:id2", async(req, res) =>{
         newTransaction.toName = toUser.name;
         newTransaction.transfer = credit;
         await newTransaction.save();
+        res.redirect("/view");
        
         
     }
